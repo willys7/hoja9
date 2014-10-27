@@ -1,5 +1,9 @@
-Guatemala Escuintla 50
+Guatemala San Marcos 250
+Jalapa Atitlan 30
 Guatemala Antigua 20
+Xela Atitlan 150
 Guatemala Atitlan 80
-Antigua Escuintla 35
-Escuintla Guatemala 30
+Antigua San Marcos 230
+Guatemala Jalapa 280
+Jalapa Guatemala 30
+San Marcos Xela 59
