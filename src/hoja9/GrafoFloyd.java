@@ -11,7 +11,7 @@ import java.io.IOException;
  * @author William
  */
 public class GrafoFloyd {
-    Archivo a= new Archivo();
+    Documento a= new Documento();
     IntefazGrafo inter;
     int[][] P;
     int[] max;
@@ -21,22 +21,22 @@ public class GrafoFloyd {
     public GrafoFloyd(){
         
         try {
-            a.obtenerArchivo("/Users/manuelgomez/Downloads/Hoja9/datos.txt");
-            a.arregloNombres(); // Nombre de los nodos
-            inter = a.matrizCostos(); // Peso de los arcos entre nodos
+            a.obtenerDoc("/Users/manuelgomez/Downloads/Hoja9/datos.txt");
+            a.Nombres(); // Nombre de los nodos
+            inter = a.Pesos(); // Peso de los arcos entre nodos
             P = new int[25][25]; // Matriz de nodos intermedios
             max = new int[25];
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        for(int n=0;n<a.grafo.size();n++){
-            for(int m=0;m<a.grafo.size();m++){
+        for(int n=0;n<a.grafoNe.size();n++){
+            for(int m=0;m<a.grafoNe.size();m++){
                 P[n][m]=10000;
             }
         }
     }
     
-    public void caminoCorto(){
+    public void masCorto(){
         for(int k=0;k<inter.size();k++){
             for(int i=0;i<inter.size();i++){
                 for(int j=0;j<inter.size();j++){
@@ -50,10 +50,10 @@ public class GrafoFloyd {
         
     }
 
-    public void centroGrafo(){
-        caminoCorto();
+    public void centroDeGraf(){
+        masCorto();
         int n=0;       
-        // Encontrar los maximos de cada columna de la matriz
+
         for(int i=0;i<inter.size();i++){
             for(int j=0;j<inter.size()-1;j++){
                 int num1=inter.getVertice(inter.get(j), inter.get(i));
@@ -69,7 +69,7 @@ public class GrafoFloyd {
             }
             n++;
         }
-        // Encontrar el minimo de los maximos de cada columna
+
         for(int i=0;i<inter.size();i++){
             int num1=max[i];
             if(num1<minimo){
@@ -81,11 +81,11 @@ public class GrafoFloyd {
         
     }
 
-    public void mostrarIntermedias(int num1, int num2){
+    public void CiudadesMedias(int num1, int num2){
         if(P[num1][num2]!=10000){
-            mostrarIntermedias(num1,P[num1][num2]);
+            CiudadesMedias(num1,P[num1][num2]);
             System.out.print(", "+inter.get(P[num1][num2]));
-            mostrarIntermedias(P[num1][num2],num2);
+            CiudadesMedias(P[num1][num2],num2);
             return;
         }
         else return;
