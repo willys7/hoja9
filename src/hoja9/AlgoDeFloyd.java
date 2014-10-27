@@ -77,7 +77,7 @@ public class AlgoDeFloyd {
                 minimo=num1;
             }
         }
-        System.out.println("  El centro del mapa es: "+inter.get(centro)+"\n");
+        System.out.println("  El centro del mapa es la ciudad de: "+inter.get(centro)+"\n");
         
     }
 
