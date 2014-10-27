@@ -77,7 +77,7 @@ public class AlgoDeFloyd {
                 minimo=num1;
             }
         }
-        System.out.println("\nEl centro del grafo es: "+inter.get(centro)+"\n");
+        System.out.println("  El centro del mapa es: "+inter.get(centro)+"\n");
         
     }
 
