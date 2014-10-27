@@ -10,7 +10,7 @@ import java.io.IOException;
  *
  * @author William
  */
-public class GrafoFloyd {
+public class AlgoDeFloyd {
     Documento a= new Documento();
     IntefazGrafo inter;
     int[][] P;
@@ -18,7 +18,7 @@ public class GrafoFloyd {
     int centro;
     int minimo=10000;
 
-    public GrafoFloyd(){
+    public AlgoDeFloyd(){
         
         try {
             a.obtenerDoc("/Users/manuelgomez/Downloads/Hoja9/datos.txt");
