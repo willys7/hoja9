@@ -21,7 +21,7 @@ public class AlgoDeFloyd {
     public AlgoDeFloyd(){
         
         try {
-            a.obtenerDoc("/Users/manuelgomez/Downloads/Hoja9/datos.txt");
+            a.obtenerDoc("C:/Users/William/Documents/NetBeansProjects/hoja9 final/datos.txt");
             a.Nombres(); // Nombre de los nodos
             inter = a.Pesos(); // Peso de los arcos entre nodos
             P = new int[25][25]; // Matriz de nodos intermedios
@@ -50,45 +50,15 @@ public class AlgoDeFloyd {
         
     }
 
-    public void centroDeGraf(){
-        masCorto();
-        int n=0;       
-
-        for(int i=0;i<inter.size();i++){
-            for(int j=0;j<inter.size()-1;j++){
-                int num1=inter.getVertice(inter.get(j), inter.get(i));
-                n=j;
-                n++;
-                int num2=inter.getVertice(inter.get(n), inter.get(i));
-                if(num1>num2){
-                    max[i]=num1;
-                }
-                else{
-                    max[i]=num2;
-                }
-            }
-            n++;
-        }
-
-        for(int i=0;i<inter.size();i++){
-            int num1=max[i];
-            if(num1<minimo){
-                centro=i;
-                minimo=num1;
-            }
-        }
-        System.out.println("  El centro del mapa es la ciudad de: "+inter.get(centro)+"\n");
-        
-    }
 
     public void CiudadesMedias(int num1, int num2){
         if(P[num1][num2]!=10000){
             CiudadesMedias(num1,P[num1][num2]);
             System.out.print(", "+inter.get(P[num1][num2]));
             CiudadesMedias(P[num1][num2],num2);
-            return;
         }
-        else return;
+        else {
+        }
       
 }
 }
