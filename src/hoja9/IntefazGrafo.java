@@ -15,7 +15,7 @@ public interface IntefazGrafo<V,E> {
 
     public void agregarVertice(V vtx1, V vtx2, E label);
 
-    public void mostrar();
+    public void desplegar();
  
     public int getIndex(V label);
 
