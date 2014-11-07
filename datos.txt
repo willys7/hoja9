@@ -1,9 +1,9 @@
-Guatemala San Marcos 250
+Guatemala Marcos 250
 Jalapa Atitlan 30
 Guatemala Antigua 20
 Xela Atitlan 150
 Guatemala Atitlan 80
-Antigua San Marcos 230
+Antigua Marcos 230
 Guatemala Jalapa 280
 Jalapa Guatemala 30
-San Marcos Xela 59
+Marcos Xela 59
