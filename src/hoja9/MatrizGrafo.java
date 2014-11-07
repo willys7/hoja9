@@ -48,7 +48,7 @@ public class MatrizGrafo<V,E> implements IntefazGrafo<V,E>{
     }
 
     @Override
-    public void mostrar(){
+    public void desplegar(){
         for(int a=0;a<ciudadesVe.size();a++){
             for(int b=0;b<ciudadesVe.size();b++){
                 System.out.print(""+vuelta[a][b]+" ");
