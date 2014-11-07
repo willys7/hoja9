@@ -21,17 +21,16 @@ public class Hoja9 {
         Scanner scan = new Scanner(System.in); 
 
 
-        while(op1!=4){       //Esta en un while esperando la opcion que el usuario elija hasta que sea 4 que es para salir 
+        while(op1!=3){       //Esta en un while esperando la opcion que el usuario elija hasta que sea 3 que es para salir 
             System.out.println("1. Buscar ruta mas corta entre dos ciudades ");
-            System.out.println("2. Nombre de la ciudad en el centro del grafo");
-            System.out.println("3. CAmbiar el grafo");
-            System.out.println("4. Salir del programa");
+            System.out.println("2. CAmbiar el grafo");
+            System.out.println("3. Salir del programa");
             op1 = scan.nextInt();
             
             
             //Imprime la matriz de adyacendia del grafo respectivo
             System.out.println("\nMatriz de adyacencia");
-            GrafoCiu.inter.mostrar();
+            GrafoCiu.inter.desplegar();
             
             
             if(op1==1){
@@ -50,13 +49,9 @@ public class Hoja9 {
                 }
             }
             
-            // Si el usuario eligio el 2, se le muestra el centro del grafo
-            else if(op1==2){
-                GrafoCiu.centroDeGraf();
-            }
             
             // Si elije la opcion se procede apreguntar que cambio quiere y se realiza
-            else if(op1==3){
+            else if(op1==2){
                 System.out.println("1. Se encuentran problemas en la carretera entre 2 ciudades");
                 System.out.println("2. Nueva carretera entre ciudades");
                 op2 = scan.nextInt();
